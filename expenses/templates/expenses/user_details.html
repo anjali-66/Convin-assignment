@@ -1,0 +1,20 @@
+<!-- expense/templates/expense/user_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.name }}'s Details</title>
+</head>
+<body>
+    <h1>{{ user.name }}'s Expense Details</h1>
+    <p>Email: {{ user.email }}</p>
+    <p>Mobile: {{ user.mobile_number }}</p>
+    
+    <h2>Expenses</h2>
+    <ul>
+        {% for expense in expenses %}
+        <li>{{ expense.title }} - {{ expense.total_amount }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

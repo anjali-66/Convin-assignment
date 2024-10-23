@@ -1,0 +1,15 @@
+<!-- expense/templates/expense/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Expense Sharing App</h1>
+    <ul>
+        <li><a href="{% url 'user_details' user_id=1 %}">User 1 Details</a></li>
+        <li><a href="{% url 'user_details' user_id=2 %}">User 2 Details</a></li>
+    </ul>
+</body>
+</html>
