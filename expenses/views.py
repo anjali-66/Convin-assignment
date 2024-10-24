@@ -4,7 +4,7 @@ from django.shortcuts import render
 from .models import User, Expense
 
 def home(request):
-    return render(request, 'expense/home.html')
+    return render(request, 'expenses/home.html')
 
 def user_details(request, user_id):
     user = User.objects.get(id=user_id)
@@ -13,4 +13,4 @@ def user_details(request, user_id):
         'user': user,
         'expenses': expenses
     }
-    return render(request, 'expense/user_details.html', context)
+    return render(request, 'expenses/user_details.html', context)
